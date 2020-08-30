@@ -15,5 +15,7 @@ return [
 
     'failed' => 'These credentials do not match our records.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'missing_token' => 'Token not provided.',
+    'error_token' => 'Error while decoding token.',
+    'expired_token' => 'Provided token is expired.',
 ];
