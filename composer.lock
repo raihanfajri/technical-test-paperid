@@ -4,8 +4,119 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1c3008fd4b1bee3587e50db444a5272",
+    "content-hash": "cc6e2e6f3818227d7513984e766f4b64",
     "packages": [
+        {
+            "name": "darkaonline/l5-swagger",
+            "version": "5.5.8.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DarkaOnLine/L5-Swagger.git",
+                "reference": "ac8b7d197415344a75749016c84522fe56c24874"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DarkaOnLine/L5-Swagger/zipball/ac8b7d197415344a75749016c84522fe56c24874",
+                "reference": "ac8b7d197415344a75749016c84522fe56c24874",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.5.*",
+                "php": "~7.0",
+                "swagger-api/swagger-ui": "^3.0",
+                "zircote/swagger-php": "~2.0|3.*"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "orchestra/testbench": "3.5.*",
+                "phpunit/phpunit": "6.*",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "L5Swagger\\L5SwaggerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "L5Swagger\\": "src"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darius Matulionis",
+                    "email": "darius@matulionis.lt"
+                }
+            ],
+            "description": "Swagger integration to Laravel 5",
+            "keywords": [
+                "api",
+                "laravel",
+                "swagger"
+            ],
+            "time": "2018-09-07T16:06:47+00:00"
+        },
+        {
+            "name": "darkaonline/swagger-lume",
+            "version": "5.5.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DarkaOnLine/SwaggerLume.git",
+                "reference": "5bf281ce7be380bcf0f9a2dd257efae67f5aebe7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DarkaOnLine/SwaggerLume/zipball/5bf281ce7be380bcf0f9a2dd257efae67f5aebe7",
+                "reference": "5bf281ce7be380bcf0f9a2dd257efae67f5aebe7",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/lumen-framework": "~5.5",
+                "php": ">=5.6.4",
+                "swagger-api/swagger-ui": "^3.0",
+                "zircote/swagger-php": "~2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~5.7",
+                "satooshi/php-coveralls": "^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "SwaggerLume\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Darius Matulionis",
+                    "email": "darius@matulionis.lt"
+                }
+            ],
+            "description": "Swagger integration to Lumen 5",
+            "keywords": [
+                "laravel",
+                "lumen",
+                "swagger"
+            ],
+            "time": "2018-03-28T10:35:23+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "v0.1.1",
@@ -38,6 +149,74 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2019-12-04T15:06:13+00:00"
+        },
+        {
+            "name": "doctrine/annotations",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/annotations.git",
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/54cacc9b81758b14e3ce750f205a393d52339e97",
+                "reference": "54cacc9b81758b14e3ce750f205a393d52339e97",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/lexer": "1.*",
+                "php": "^5.6 || ^7.0"
+            },
+            "require-dev": {
+                "doctrine/cache": "1.*",
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.4.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Common\\Annotations\\": "lib/Doctrine/Common/Annotations"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Roman Borschel",
+                    "email": "roman@code-factory.org"
+                },
+                {
+                    "name": "Benjamin Eberlei",
+                    "email": "kontakt@beberlei.de"
+                },
+                {
+                    "name": "Guilherme Blanco",
+                    "email": "guilhermeblanco@gmail.com"
+                },
+                {
+                    "name": "Jonathan Wage",
+                    "email": "jonwage@gmail.com"
+                },
+                {
+                    "name": "Johannes Schmitt",
+                    "email": "schmittjoh@gmail.com"
+                }
+            ],
+            "description": "Docblock Annotations Parser",
+            "homepage": "http://www.doctrine-project.org",
+            "keywords": [
+                "annotations",
+                "docblock",
+                "parser"
+            ],
+            "time": "2017-02-24T16:22:25+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -661,6 +840,89 @@
             "time": "2020-08-18T13:47:57+00:00"
         },
         {
+            "name": "laravel/lumen-framework",
+            "version": "v5.5.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/lumen-framework.git",
+                "reference": "63ac078a31774a70859c7ae982537eda6fd87386"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/lumen-framework/zipball/63ac078a31774a70859c7ae982537eda6fd87386",
+                "reference": "63ac078a31774a70859c7ae982537eda6fd87386",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/auth": "5.5.*",
+                "illuminate/broadcasting": "5.5.*",
+                "illuminate/bus": "5.5.*",
+                "illuminate/cache": "5.5.*",
+                "illuminate/config": "5.5.*",
+                "illuminate/container": "5.5.*",
+                "illuminate/contracts": "5.5.*",
+                "illuminate/database": "5.5.*",
+                "illuminate/encryption": "5.5.*",
+                "illuminate/events": "5.5.*",
+                "illuminate/filesystem": "5.5.*",
+                "illuminate/hashing": "5.5.*",
+                "illuminate/http": "5.5.*",
+                "illuminate/pagination": "5.5.*",
+                "illuminate/pipeline": "5.5.*",
+                "illuminate/queue": "5.5.*",
+                "illuminate/support": "5.5.*",
+                "illuminate/translation": "5.5.*",
+                "illuminate/validation": "5.5.*",
+                "illuminate/view": "5.5.*",
+                "monolog/monolog": "~1.12",
+                "mtdowling/cron-expression": "~1.0",
+                "nikic/fast-route": "~1.2",
+                "php": ">=7.0",
+                "symfony/http-foundation": "~3.3",
+                "symfony/http-kernel": "~3.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~5.7"
+            },
+            "suggest": {
+                "laravel/tinker": "Required to use the tinker console command (~1.0).",
+                "vlucas/phpdotenv": "Required to use .env files (~2.2)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Lumen\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                }
+            ],
+            "description": "The Laravel Lumen Framework.",
+            "homepage": "https://lumen.laravel.com",
+            "keywords": [
+                "framework",
+                "laravel",
+                "lumen"
+            ],
+            "time": "2017-10-16T23:13:50+00:00"
+        },
+        {
             "name": "laravel/tinker",
             "version": "v1.0.10",
             "source": {
@@ -1005,6 +1267,52 @@
                 "time"
             ],
             "time": "2019-10-14T05:51:36+00:00"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35|~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2018-02-13T20:26:39+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1407,6 +1715,63 @@
                 "uuid"
             ],
             "time": "2020-02-21T04:36:14+00:00"
+        },
+        {
+            "name": "swagger-api/swagger-ui",
+            "version": "v3.32.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/swagger-api/swagger-ui.git",
+                "reference": "57f39bd5724956d96af43a86439e2808b981fb18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/57f39bd5724956d96af43a86439e2808b981fb18",
+                "reference": "57f39bd5724956d96af43a86439e2808b981fb18",
+                "shasum": ""
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Anna Bodnia",
+                    "email": "anna.bodnia@gmail.com"
+                },
+                {
+                    "name": "Buu Nguyen",
+                    "email": "buunguyen@gmail.com"
+                },
+                {
+                    "name": "Josh Ponelat",
+                    "email": "jponelat@gmail.com"
+                },
+                {
+                    "name": "Kyle Shockey",
+                    "email": "kyleshockey1@gmail.com"
+                },
+                {
+                    "name": "Robert Barnwell",
+                    "email": "robert@robertismy.name"
+                },
+                {
+                    "name": "Sahar Jafari",
+                    "email": "shr.jafari@gmail.com"
+                }
+            ],
+            "description": " Swagger UI is a collection of HTML, Javascript, and CSS assets that dynamically generate beautiful documentation from a Swagger-compliant API.",
+            "homepage": "http://swagger.io",
+            "keywords": [
+                "api",
+                "documentation",
+                "openapi",
+                "specification",
+                "swagger",
+                "ui"
+            ],
+            "time": "2020-08-27T20:11:06+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -3135,6 +3500,68 @@
                 }
             ],
             "time": "2020-07-14T17:54:18+00:00"
+        },
+        {
+            "name": "zircote/swagger-php",
+            "version": "2.0.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zircote/swagger-php.git",
+                "reference": "a25c1bfe508e5f27d5f618648449593a79cbe406"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zircote/swagger-php/zipball/a25c1bfe508e5f27d5f618648449593a79cbe406",
+                "reference": "a25c1bfe508e5f27d5f618648449593a79cbe406",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/annotations": "*",
+                "php": ">=5.6",
+                "symfony/finder": ">=2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">=4.8.35 <=5.6",
+                "squizlabs/php_codesniffer": ">=2.7",
+                "zendframework/zend-form": "<2.8"
+            },
+            "bin": [
+                "bin/swagger"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Swagger\\": "src"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Robert Allen",
+                    "email": "zircote@gmail.com",
+                    "homepage": "http://www.zircote.com"
+                },
+                {
+                    "name": "Bob Fanger",
+                    "email": "bfanger@gmail.com",
+                    "homepage": "http://bfanger.nl"
+                }
+            ],
+            "description": "Swagger-PHP - Generate interactive documentation for your RESTful API using phpdoc annotations",
+            "homepage": "https://github.com/zircote/swagger-php/",
+            "keywords": [
+                "api",
+                "json",
+                "rest",
+                "service discovery"
+            ],
+            "time": "2020-05-10T13:42:24+00:00"
         }
     ],
     "packages-dev": [

@@ -58,10 +58,22 @@ class UserController extends Controller
             throw new BadRequestHttpException(implode(" | ", $validator->errors()->all()));
         }
 
-        $token = $this->userService->verify($request->all());
+        $userInfo = [
+            'ip' => $request->ip(),
+            'user_agent' => $request->userAgent()
+        ];
+
+        $token = $this->userService->verify($request->all(), $userInfo);
 
         return response([
             'token' => $token
         ], 200);
+    }
+
+    public function logout(Request $request)
+    {
+        $this->userService->logout($request->token);
+
+        return response('', 204);
     }
 }

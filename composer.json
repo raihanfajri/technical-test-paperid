@@ -6,10 +6,11 @@
     "type": "project",
     "require": {
         "php": ">=7.0.0",
+        "darkaonline/l5-swagger": "5.5.*",
         "fideloper/proxy": "~3.3",
+        "firebase/php-jwt": "^5.0",
         "laravel/framework": "5.5.*",
-        "laravel/tinker": "~1.0",
-        "firebase/php-jwt": "^5.0"
+        "laravel/tinker": "~1.0"
     },
     "require-dev": {
         "filp/whoops": "~2.0",
@@ -48,6 +49,9 @@
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-install-cmd": [
+            "cp -a vendor/swagger-api/swagger-ui/dist public/swagger-ui-assets"
         ]
     },
     "config": {
