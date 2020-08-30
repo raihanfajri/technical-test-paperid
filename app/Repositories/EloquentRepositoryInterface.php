@@ -29,5 +29,5 @@ interface EloquentRepositoryInterface
 
    public function all(): Collection;
 
-   public function list($limit): Collection;
+   public function list($offset, $limit, $q): Collection;
 }

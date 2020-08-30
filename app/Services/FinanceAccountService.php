@@ -42,7 +42,13 @@ class FinanceAccountService
 
     public function list($params)
     {
-        return $this->financeAccount->list($params);
+        $page = $params['page'] ?? 1;
+        $limit = $params['limit'] ?? 10;
+
+        $offset = ($page - 1) * $limit;
+        $q = $params['q'] ?? "";
+
+        return $this->financeAccount->list($offset, $limit, $q);
     }
 
     public function detail($id)

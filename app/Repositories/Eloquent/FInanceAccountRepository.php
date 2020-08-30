@@ -19,11 +19,15 @@ class FinanceAccountRepository extends BaseRepository implements FinanceAccountR
        parent::__construct($model);
    }
 
-   /**
-    * @return Collection
-    */
-   public function all(): Collection
+   protected function searchByQ($q)
    {
-       return $this->model->all();    
+        return $this->model->where(
+            function ($query) use ($q)
+            {
+                $query->where('name', 'like', "$q%")
+                    ->orWhere('description', 'like', "$q%")
+                    ->orWhere('type', 'like', "$q%");
+            }        
+        );
    }
 }
