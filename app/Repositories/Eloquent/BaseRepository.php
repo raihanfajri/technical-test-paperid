@@ -63,8 +63,16 @@ class BaseRepository implements EloquentRepositoryInterface
     /**
     * @return Collection
     */
-    public function list($limit): Collection
+    public function list($offset, $limit, $q): Collection
     {
-        return $this->model->paginate($limit);    
+        return $this->searchByQ($q)
+            ->offset($offset)
+            ->limit($limit)
+            ->get();    
+    }
+
+    protected function searchByQ($q)
+    {
+        return $this->model;
     }
 }
