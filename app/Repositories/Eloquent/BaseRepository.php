@@ -11,7 +11,7 @@ class BaseRepository implements EloquentRepositoryInterface
     /**      
      * @var Model      
      */     
-     protected $model;       
+    protected $model; 
 
     /**      
      * BaseRepository constructor.      
@@ -49,7 +49,11 @@ class BaseRepository implements EloquentRepositoryInterface
     */
     public function find($id)
     {
-        return $this->model->find($id);
+        $query = $this->model;
+
+        $query = $this->withRelations($query);
+
+        return $query->find($id);
     }
 
     /**
@@ -65,13 +69,28 @@ class BaseRepository implements EloquentRepositoryInterface
     */
     public function list($offset, $limit, $q): Collection
     {
-        return $this->searchByQ($q)
-            ->offset($offset)
+        $query = $this->initQuery();
+
+        $query = $this->searchByQ($query, $q);
+
+        $query = $this->withRelations($query);
+
+        return $query->offset($offset)
             ->limit($limit)
             ->get();    
     }
 
-    protected function searchByQ($q)
+    protected function searchByQ($query, $q)
+    {
+        return $query;
+    }
+
+    protected function withRelations($query)
+    {
+        return $query;
+    }
+
+    protected function initQuery()
     {
         return $this->model;
     }

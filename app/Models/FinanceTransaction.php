@@ -5,14 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class User extends Model
+class FinanceTransaction extends Model
 {
     use SoftDeletes;
 
-    protected $table = 'users';
+    protected $table = 'finance_transactions';
 
     protected $fillable = [
-        'email', 'password',
+        'title', 'description', 'finance_account_id',
+        'amount', 'finance_name',
     ];
 
     public $timestamps = true;
@@ -24,7 +25,9 @@ class User extends Model
      */
     protected $dates = ['deleted_at'];
 
-    protected $hidden = [
-        'password'
-    ];
+
+   public function account()
+   {
+       return $this->belongsTo('App\Models\FinanceAccount', 'finance_account_id', 'id');
+   }
 }

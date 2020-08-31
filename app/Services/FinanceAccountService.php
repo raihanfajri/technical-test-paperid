@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Exceptions\ValidationException;
 use App\Repositories\FinanceAccountRepositoryInterface as FinanceAccountRepository;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 

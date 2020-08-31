@@ -179,6 +179,7 @@ return [
 
         App\Providers\UserServiceProvider::class,
         App\Providers\FinanceAccountServiceProvider::class,
+        App\Providers\FinanceTransactionServiceProvider::class,
         
     ],
 

@@ -29,5 +29,16 @@ $router->group(['middleware' => 'jwt.auth', 'prefix' => ''],
                 $router->delete('/{id}', 'FinanceAccountController@delete');
             }
         );
+
+        $router->group(['prefix' => 'finance-transaction'], 
+            function () use ($router)
+            {
+                $router->get('', 'FinanceTransactionController@list');
+                $router->get('/{id}', 'FinanceTransactionController@detail');
+                $router->post('', 'FinanceTransactionController@create');
+                $router->patch('/{id}', 'FinanceTransactionController@update');
+                $router->delete('/{id}', 'FinanceTransactionController@delete');
+            }
+        );
     }
 );
